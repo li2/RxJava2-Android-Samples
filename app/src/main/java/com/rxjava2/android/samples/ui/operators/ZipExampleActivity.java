@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.rxjava2.android.samples.R;
 import com.rxjava2.android.samples.model.User;
 import com.rxjava2.android.samples.utils.AppConstant;
+import com.rxjava2.android.samples.utils.BaseActivity;
 import com.rxjava2.android.samples.utils.Utils;
 
 import java.util.List;
@@ -26,7 +27,7 @@ import io.reactivex.schedulers.Schedulers;
 /**
  * Created by amitshekhar on 27/08/16.
  */
-public class ZipExampleActivity extends AppCompatActivity {
+public class ZipExampleActivity extends BaseActivity {
 
     private static final String TAG = ZipExampleActivity.class.getSimpleName();
     Button btn;
@@ -35,10 +36,8 @@ public class ZipExampleActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_example);
         btn = (Button) findViewById(R.id.btn);
         textView = (TextView) findViewById(R.id.textView);
-
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -8,6 +8,15 @@ public class ApiUser {
     public String firstname;
     public String lastname;
 
+    public ApiUser() {
+    }
+
+    public ApiUser(long id, String firstname, String lastname) {
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastname;
+    }
+
     @Override
     public String toString() {
         return "ApiUser{" +

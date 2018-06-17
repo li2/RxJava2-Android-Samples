@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.rxjava2.android.samples.R;
 import com.rxjava2.android.samples.utils.AppConstant;
+import com.rxjava2.android.samples.utils.BaseActivity;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;
@@ -17,7 +18,7 @@ import io.reactivex.disposables.Disposable;
 /**
  * Created by amitshekhar on 28/08/16.
  */
-public class MergeExampleActivity extends AppCompatActivity {
+public class MergeExampleActivity extends BaseActivity {
 
     private static final String TAG = MergeExampleActivity.class.getSimpleName();
     Button btn;
@@ -26,7 +27,6 @@ public class MergeExampleActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_example);
         btn = (Button) findViewById(R.id.btn);
         textView = (TextView) findViewById(R.id.textView);
 

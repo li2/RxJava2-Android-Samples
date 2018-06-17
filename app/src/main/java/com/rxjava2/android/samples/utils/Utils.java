@@ -14,50 +14,24 @@ import java.util.List;
  */
 public class Utils {
 
+    private static final ApiUser API_USER_0 = new ApiUser(0, "三", "张");
+    private static final ApiUser API_USER_1 = new ApiUser(1, "四", "李");
+    private static final ApiUser API_USER_2 = new ApiUser(2, "二麻子", "王");
+
     private Utils() {
         // This class in not publicly instantiable.
     }
 
     public static List<User> getUserList() {
-
-        List<User> userList = new ArrayList<>();
-
-        User userOne = new User();
-        userOne.firstname = "Amit";
-        userOne.lastname = "Shekhar";
-        userList.add(userOne);
-
-        User userTwo = new User();
-        userTwo.firstname = "Manish";
-        userTwo.lastname = "Kumar";
-        userList.add(userTwo);
-
-        User userThree = new User();
-        userThree.firstname = "Sumit";
-        userThree.lastname = "Kumar";
-        userList.add(userThree);
-
-        return userList;
+        return convertApiUserListToUserList(getApiUserList());
     }
 
     public static List<ApiUser> getApiUserList() {
 
         List<ApiUser> apiUserList = new ArrayList<>();
-
-        ApiUser apiUserOne = new ApiUser();
-        apiUserOne.firstname = "Amit";
-        apiUserOne.lastname = "Shekhar";
-        apiUserList.add(apiUserOne);
-
-        ApiUser apiUserTwo = new ApiUser();
-        apiUserTwo.firstname = "Manish";
-        apiUserTwo.lastname = "Kumar";
-        apiUserList.add(apiUserTwo);
-
-        ApiUser apiUserThree = new ApiUser();
-        apiUserThree.firstname = "Sumit";
-        apiUserThree.lastname = "Kumar";
-        apiUserList.add(apiUserThree);
+        apiUserList.add(API_USER_0);
+        apiUserList.add(API_USER_1);
+        apiUserList.add(API_USER_2);
 
         return apiUserList;
     }
@@ -79,19 +53,8 @@ public class Utils {
     public static List<User> getUserListWhoLovesCricket() {
 
         List<User> userList = new ArrayList<>();
-
-        User userOne = new User();
-        userOne.id = 1;
-        userOne.firstname = "Amit";
-        userOne.lastname = "Shekhar";
-        userList.add(userOne);
-
-        User userTwo = new User();
-        userTwo.id = 2;
-        userTwo.firstname = "Manish";
-        userTwo.lastname = "Kumar";
-        userList.add(userTwo);
-
+        userList.add(new User(API_USER_0));
+        userList.add(new User(API_USER_2));
         return userList;
     }
 
@@ -99,19 +62,8 @@ public class Utils {
     public static List<User> getUserListWhoLovesFootball() {
 
         List<User> userList = new ArrayList<>();
-
-        User userOne = new User();
-        userOne.id = 1;
-        userOne.firstname = "Amit";
-        userOne.lastname = "Shekhar";
-        userList.add(userOne);
-
-        User userTwo = new User();
-        userTwo.id = 3;
-        userTwo.firstname = "Sumit";
-        userTwo.lastname = "Kumar";
-        userList.add(userTwo);
-
+        userList.add(new User(API_USER_1));
+        userList.add(new User(API_USER_2));
         return userList;
     }
 
